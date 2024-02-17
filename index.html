@@ -11,15 +11,98 @@
 </head>
 
 <body>
-    <header>
+    <header class="container mx-auto lg:px-32">
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-xl">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn text-[#1DD100] bg-green-100">Bus
+                        <img class="ml-[10px]" src="images/bus-icon.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </nav>
 
+        <!-- banner section start hare -->
+        <div class="banner mt-7">
+            <div class="bg-[url(images/banner.png)] h-[50vh] lg:min-h-screen rounded-[32px] bg-no-repeat">
+                <div class="flex justify-center items-center flex-col">
+                    <h1
+                        class="text-3xl lg:text-6xl leading-10 lg:leading-[86px] font-extrabold text-white text-center mt-16">
+                        End-to-End Travel with <br> <span class="text-[#1DD100]">P Paribahan</span></h1>
+                    <p class="text-lg text-white leading-7 lg:leading-8 text-center mt-4">Yes, you can run unit tests
+                        and view the results directly within the app. <br> The integrated testing features allow for a
+                        streamlined .</p>
+                    <button class="btn bg-[#1DD100] border-0 mt-8">Buy Tickets</button>
+                </div>
+
+            </div>
+
+            <!-- banner footer -->
+            <div class="flex flex-col items-center lg:flex-row  lg:justify-around lg:-translate-y-28">
+                <div class="flex justify-center items-center bg-white rounded-3xl w-[308px] h-32">
+                    <div>
+                        <img src="images/people.png" alt="">
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-4xl">500K+</h3>
+                        <p class="text-lg text-gray-600">Registered users</p>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center bg-white rounded-3xl w-[308px] h-32">
+                    <div>
+                        <img src="images/ticket-cupon.png" alt="">
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-4xl">1.7 lacks</h3>
+                        <p class="text-lg text-gray-600">Tickets sold</p>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center bg-white rounded-3xl w-[308px] h-32">
+                    <div>
+                        <img src="images/people.png" alt="">
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-4xl">80K+</h3>
+                        <p class="text-lg text-gray-600">Rental partners</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- banner section end -->
     </header>
     <main>
 
     </main>
 
     <footer>
-        
+
     </footer>
 
 

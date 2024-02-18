@@ -134,8 +134,10 @@ function coupon () {
         addChildElementClass('input-field');
         const grandTotal = getValue('grand-total');
         
+
         if('NEW15'){
             const setGrandTotal = Math.floor(grandTotal - (grandTotal * 15) / 100);
+        
             getId('grand-total').innerText = setGrandTotal;
         }
         if('Couple 20'){

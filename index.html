@@ -42,7 +42,7 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a class="btn text-[#1DD100] bg-green-100">Bus
+                    <a id="but-ticket" class="btn text-[#1DD100] bg-green-100">Bus
                         <img class="ml-[10px]" src="images/bus-icon.png" alt="">
                     </a>
                 </div>
@@ -122,7 +122,7 @@
                         <p class="text-lg font-medium">use by January 2024</p>
                     </div>
                     <div class="border-t lg:border-none">
-                        <h3 class="text-3xl font-bold">Couple20</h3>
+                        <h3 class="text-3xl font-bold">Couple 20</h3>
                         <p class="text-xl font-medium">coupon code</p>
                     </div>
                 </div>
@@ -159,7 +159,8 @@
 
                         <div class="flex justify-center items-center py-2 px-4 bg-green-100 rounded-xl">
                             <img src="images/seat-green.png" alt="">
-                            <p class="lg:ml-2 font-medium text-sm lg:text-lg text-[#1DD100]">40 Seats left</p>
+                            <p id="" class="lg:ml-2 font-medium text-sm lg:text-lg text-[#1DD100]"><span
+                                    id="seat-left">8</span> Seats left</p>
                         </div>
                     </div>
                     <div class="flex justify-between items-center mt-10">
@@ -211,75 +212,148 @@
 
                     <!-- seat section  -->
 
-                    <div>
+                    <div class="mt-6">
                         <div class="flex justify-between">
                             <p class="px-10 py-4 rounded-xl">A</p>
-                            <p class="px-10 py-4 rounded-xl">A1</p>
-                            <p class="px-10 py-4 rounded-xl">A2</p>
-                            <p class="px-10 py-4 rounded-xl">A3</p>
-                            <p class="px-10 py-4 rounded-xl">A4</p>
+                            <p id="A1" class="px-10 py-4 rounded-xl cursor-pointer">A1</p>
+                            <p id="A2" class="px-10 py-4 rounded-xl cursor-pointer">A2</p>
+                            <p id="A3" class="px-10 py-4 rounded-xl cursor-pointer">A3</p>
+                            <p id="A4" class="px-10 py-4 rounded-xl cursor-pointer">A4</p>
                         </div>
-                        <div class="flex justify-between">
+                        <div class="flex justify-between mt-7">
                             <p class="px-10 py-4 rounded-xl">B</p>
-                            <p class="px-10 py-4 rounded-xl">B1</p>
-                            <p class="px-10 py-4 rounded-xl">B2</p>
-                            <p class="px-10 py-4 rounded-xl">B3</p>
-                            <p class="px-10 py-4 rounded-xl">B4</p>
+                            <p id="B1" class="px-10 py-4 rounded-xl cursor-pointer">B1</p>
+                            <p id="B2" class="px-10 py-4 rounded-xl cursor-pointer">B2</p>
+                            <p id="B3" class="px-10 py-4 rounded-xl cursor-pointer">B3</p>
+                            <p id="B4" class="px-10 py-4 rounded-xl cursor-pointer">B4</p>
                         </div>
                     </div>
                 </div>
                 <div class="w-2/6">
                     <div class="ml-16">
                         <h1 class="text-2xl font-semibold mb-8">Select your seat</h1>
-                    <div class="flex justify-between">
-                        <p class="text-[#030712] font-medium">Seat</p>
-                        <p class="text-[#030712] font-medium">Class</p>
-                        <p class="text-[#030712] font-medium">Price</p>
-                    </div>
-                    <div class="flex justify-between mt-4">
-                        <p class="text-gray-500">C2</p>
-                        <p class="text-gray-500">Economy</p>
-                        <p class="text-gray-500">550</p>
-                    </div>
-                    <div class="flex justify-between mt-4">
-                        <p class="text-gray-500">C2</p>
-                        <p class="text-gray-500">Economy</p>
-                        <p class="text-gray-500">550</p>
-                    </div>
-                    <hr class="mt-4 text-gray-700">
-                    <div class="flex justify-between mt-6">
-                        <p class="font-semibold text-[#030712]">Total Price</p>
-                        <p class="font-semibold text-[#030712]">BDT 1100</p>
-                    </div>
-                    <div class="flex p-3 border space-x-2 mt-5">
-                        <label class="input input-bordered flex items-center gap-2">
-                            <input type="text" class="grow" placeholder="Have any coupon" />
-                          </label>
-                          <button class="btn bg-[#1DD100]">Apply</button>
-                    </div>
-                    <div class="flex justify-between mt-4">
-                        <p class="font-semibold text-[#030712]">Grand total</p>
-                        <p class="font-semibold text-[#030712]">BDT 1100</p>
-                    </div>
-                    <hr>
+                        <div class="flex justify-between">
+                            <p class="text-[#030712] font-medium">Seat <span id="seat-count"
+                                    class="bg-[#1DD100] px-1 rounded-md">0</span></p>
+                            <p class="text-[#030712] font-medium">Class</p>
+                            <p class="text-[#030712] font-medium">Price</p>
+                        </div>
+                        <div id="a1-eco" class="flex justify-between mt-4 hidden">
+                            <p class="text-gray-500">A1</p>
+                            <p class="text-gray-500">Economy</p>
+                            <p class="text-gray-500">550</p>
+                        </div>
+
+
+
+                        <div id="a2-eco" class="flex justify-between mt-4 hidden">
+                            <p class="text-gray-500">A2</p>
+                            <p class="text-gray-500">Economy</p>
+                            <p class="text-gray-500">550</p>
+                        </div>
+
+                        <div id="a3-eco" class="flex justify-between mt-4 hidden">
+                            <p class="text-gray-500">A3</p>
+                            <p class="text-gray-500">Economy</p>
+                            <p class="text-gray-500">550</p>
+                        </div>
+
+
+                        <div id="a4-eco" class="flex justify-between mt-4 hidden">
+                            <p class="text-gray-500">A4</p>
+                            <p class="text-gray-500">Economy</p>
+                            <p class="text-gray-500">550</p>
+                        </div>
+
+
+                        <div id="b1-eco" class="flex justify-between mt-4 hidden">
+                            <p class="text-gray-500">B1</p>
+                            <p class="text-gray-500">Economy</p>
+                            <p class="text-gray-500">550</p>
+                        </div>
+
+                        <div id="b2-eco" class="flex justify-between mt-4 hidden">
+                            <p class="text-gray-500">B2</p>
+                            <p class="text-gray-500">Economy</p>
+                            <p class="text-gray-500">550</p>
+                        </div>
+
+
+                        <div id="b3-eco" class="flex justify-between mt-4 hidden">
+                            <p class="text-gray-500">B3</p>
+                            <p class="text-gray-500">Economy</p>
+                            <p class="text-gray-500">550</p>
+                        </div>
+
+
+
+
+                        <div id="b4-eco" class="flex justify-between mt-4 hidden">
+                            <p class="text-gray-500">B4</p>
+                            <p class="text-gray-500">Economy</p>
+                            <p class="text-gray-500">550</p>
+                        </div>
+                        <hr class="mt-4 text-gray-700">
+                        <div class="flex justify-between mt-6">
+                            <p class="font-semibold text-[#030712]">Total Price</p>
+                            <p class="font-semibold text-[#030712]">BDT <span id="total-price">0</span></p>
+                        </div>
+                        <div id="input-field" class="flex p-3 border space-x-2 mt-5">
+                            <label class="input input-bordered flex items-center gap-2">
+                                <input id="input" type="text" class="grow" placeholder="Have any coupon" />
+                            </label>
+                            <button onclick="coupon()" class="btn bg-[#1DD100]">Apply</button>
+                        </div>
+                        <div class="flex justify-between mt-4">
+                            <p class="font-semibold text-[#030712]">Grand total</p>
+                            <p class="font-semibold text-[#030712]">BDT <span id="grand-total">0</span></p>
+                        </div>
+                        <hr>
                     </div>
                     <div class="mt-8 ml-10">
                         <h3 class="font-semibold my-4 text-[#030712]">Passenger Name*</h3>
-                        <input type="text" placeholder="Enter your name" class="input input-bordered input-lg w-full max-w-xs" />
+                        <input type="text" placeholder="Enter your name"
+                            class="input input-bordered input-lg w-full max-w-xs" />
                         <h3 class="font-semibold my-4 text-[#030712]">Phone Number*</h3>
-                        <input type="text" placeholder="Enter your phone number" class="input input-bordered input-lg w-full max-w-xs" />
+                        <input type="text" placeholder="Enter your phone number"
+                            class="input input-bordered input-lg w-full max-w-xs" />
                         <h3 class="font-semibold my-4 text-[#030712]">Email ID</h3>
-                        <input type="text" placeholder="Enter your email" class="input input-bordered input-lg w-full max-w-xs" />
-                        <button class="btn bg-[#1DD100] mt-4 w-full">Success</button>
+                        <input type="text" placeholder="Enter your email"
+                            class="input input-bordered input-lg w-full max-w-xs" />
+                        <!-- The button to open modal -->
+
+                        <button class="btn bg-[#1DD100] mt-4 w-full" onclick="my_modal_4.showModal()">Next</button>
+                        <dialog id="my_modal_4" class="modal">
+                            <div class="modal-box w-11/12 max-w-5xl">
+                                <h3 class="font-bold text-lg">Hello!</h3>
+                                <p class="py-4">Click the button below to close Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Consectetur officiis quaerat non unde maxime. Repellat neque non
+                                    voluptate ut, magni nemo accusantium repudiandae. Quia veritatis, omnis dolorem
+                                    fugit temporibus tempora deleniti ex, ad amet, expedita cum sed assumenda nobis
+                                    atque repellendus. Enim sit, eum possimus itaque explicabo eaque excepturi, cumque
+                                    aliquam debitis ea deserunt neque saepe. Distinctio, facilis obcaecati!</p>
+
+                                <img class="mx-auto" src="images/success.png" alt="">
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button, it will close the modal -->
+                                        <div class="flex justify-center items-center">
+                                            <button class="btn bg-[#1DD100] mt-4 w-full">Continue</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
-                    
                 </div>
-                
+
             </div>
+
         </div>
-       
         </div>
-        <!-- bus seat section end -->
+
+        </div>
+        <!-- bus seat section end  btn -->
 
 
     </main>

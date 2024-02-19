@@ -59,7 +59,7 @@
                     <p class="text-lg text-white leading-7 lg:leading-8 text-center mt-4">Yes, you can run unit tests
                         and view the results directly within the app. <br> The integrated testing features allow for a
                         streamlined .</p>
-                    <button class="btn bg-[#1DD100] border-0 mt-8">Buy Tickets</button>
+                    <a href="#section-btn"><button id="" class="btn bg-[#1DD100] border-0 mt-8 section-btn">Buy Tickets</button></a>
                 </div>
 
             </div>
@@ -191,7 +191,7 @@
 
         <!-- bus seat section start -->
 
-        <div class="container mt-24 mx-auto px-4 lg:px-32">
+        <div id="section-btn" class="container mt-24 mx-auto px-4 lg:px-32">
             <div class="flex">
                 <div class="w-3/5">
                     <h1 class="text-2xl font-semibold mb-8">Select Your Seat</h1>
@@ -215,17 +215,17 @@
                     <div class="mt-6">
                         <div class="flex justify-between">
                             <p class="px-10 py-4 rounded-xl">A</p>
-                            <p id="A1" class="px-10 py-4 rounded-xl cursor-pointer">A1</p>
-                            <p id="A2" class="px-10 py-4 rounded-xl cursor-pointer">A2</p>
-                            <p id="A3" class="px-10 py-4 rounded-xl cursor-pointer">A3</p>
-                            <p id="A4" class="px-10 py-4 rounded-xl cursor-pointer">A4</p>
+                            <button id="A1" class="px-10 py-4 rounded-xl cursor-pointer seat-class">A1</button>
+                            <button id="A2" class="px-10 py-4 rounded-xl cursor-pointer seat-class">A2</button>
+                            <button id="A3" class="px-10 py-4 rounded-xl cursor-pointer seat-class">A3</button>
+                            <button id="A4" class="px-10 py-4 rounded-xl cursor-pointer seat-class">A4</button>
                         </div>
                         <div class="flex justify-between mt-7">
                             <p class="px-10 py-4 rounded-xl">B</p>
-                            <p id="B1" class="px-10 py-4 rounded-xl cursor-pointer">B1</p>
-                            <p id="B2" class="px-10 py-4 rounded-xl cursor-pointer">B2</p>
-                            <p id="B3" class="px-10 py-4 rounded-xl cursor-pointer">B3</p>
-                            <p id="B4" class="px-10 py-4 rounded-xl cursor-pointer">B4</p>
+                            <button id="B1" class="px-10 py-4 rounded-xl cursor-pointer seat-class">B1</button>
+                            <button id="B2" class="px-10 py-4 rounded-xl cursor-pointer seat-class">B2</button>
+                            <button id="B3" class="px-10 py-4 rounded-xl cursor-pointer seat-class">B3</button>
+                            <button id="B4" class="px-10 py-4 rounded-xl cursor-pointer seat-class">B4</button>
                         </div>
                     </div>
                 </div>
@@ -243,22 +243,16 @@
                             <p class="text-gray-500">Economy</p>
                             <p class="text-gray-500">550</p>
                         </div>
-
-
-
                         <div id="a2-eco" class="flex justify-between mt-4 hidden">
                             <p class="text-gray-500">A2</p>
                             <p class="text-gray-500">Economy</p>
                             <p class="text-gray-500">550</p>
                         </div>
-
                         <div id="a3-eco" class="flex justify-between mt-4 hidden">
                             <p class="text-gray-500">A3</p>
                             <p class="text-gray-500">Economy</p>
                             <p class="text-gray-500">550</p>
                         </div>
-
-
                         <div id="a4-eco" class="flex justify-between mt-4 hidden">
                             <p class="text-gray-500">A4</p>
                             <p class="text-gray-500">Economy</p>
@@ -302,7 +296,7 @@
                             <label class="input input-bordered flex items-center gap-2">
                                 <input id="input" type="text" class="grow" placeholder="Have any coupon" />
                             </label>
-                            <button id="button-disable" onclick="coupon()" class="btn bg-[#1DD100]" >Apply</button>
+                            <button id="button-disable" onclick="coupon()" class="btn bg-[#1DD100]">Apply</button>
                         </div>
                         <div class="flex justify-between mt-4">
                             <p class="font-semibold text-[#030712]">Grand total</p>
@@ -326,8 +320,8 @@
                         <dialog id="my_modal_4" class="modal">
                             <div class="modal-box w-11/12 max-w-5xl">
                                 <div class="text-center w-[50%] mx-auto mb-9">
-                                    <p class="py-4">Thank you for Booking Our Bus Seats. 
-                                        We are working hard to find the best service and deals for you. 
+                                    <p class="py-4">Thank you for Booking Our Bus Seats.
+                                        We are working hard to find the best service and deals for you.
                                         Shortly you will find a confirmation in your email.</p>
                                 </div>
 
@@ -336,7 +330,8 @@
                                     <form method="dialog">
                                         <!-- if there is a button, it will close the modal -->
                                         <div class="flex justify-center items-center">
-                                            <button class="btn bg-[#1DD100] mt-4 w-full">Continue</button>
+                                            <button onClick="window.location.reload(true)"
+                                                class="btn bg-[#1DD100] mt-4 w-full">Continue</button>
                                         </div>
                                     </form>
                                 </div>

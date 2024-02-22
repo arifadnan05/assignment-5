@@ -309,14 +309,14 @@
                         <input type="text" placeholder="Enter your name"
                             class="input input-bordered input-lg w-full max-w-xs" />
                         <h3 class="font-semibold my-4 text-[#030712]">Phone Number*</h3>
-                        <input type="text" placeholder="Enter your phone number"
+                        <input id="input-number" type="number" placeholder="Enter your phone number"
                             class="input input-bordered input-lg w-full max-w-xs" />
                         <h3 class="font-semibold my-4 text-[#030712]">Email ID</h3>
                         <input type="text" placeholder="Enter your email"
                             class="input input-bordered input-lg w-full max-w-xs" />
                         <!-- The button to open modal -->
 
-                        <button class="btn bg-[#1DD100] mt-4 w-full" onclick="my_modal_4.showModal()">Next</button>
+                        <button id="next-btn" class="btn bg-[#1DD100] mt-4 w-full" onclick="my_modal_4.showModal()" disabled>Next</button>
                         <dialog id="my_modal_4" class="modal">
                             <div class="modal-box w-11/12 max-w-5xl">
                                 <div class="text-center w-[50%] mx-auto mb-9">

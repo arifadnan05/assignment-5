@@ -1,69 +1,4 @@
 
-document.getElementById('A1').addEventListener('click', function () {
-    removeChildElementClass('a1-eco');
-    const ticketPrice = getValue('total-price');
-    const totalTicketPrice = ticketPrice + 550;
-    getId('total-price').innerText = totalTicketPrice;
-    grandTotal();
-    this.classList.add("pointer-events-none");
-})
-document.getElementById('A2').addEventListener('click', function () {
-    removeChildElementClass('a2-eco');
-    const ticketPrice = getValue('total-price');
-    const totalTicketPrice = ticketPrice + 550;
-    getId('total-price').innerText = totalTicketPrice;
-    grandTotal();
-    this.classList.add("pointer-events-none");
-})
-document.getElementById('A3').addEventListener('click', function () {
-    removeChildElementClass('a3-eco');
-    const ticketPrice = getValue('total-price');
-    const totalTicketPrice = ticketPrice + 550;
-    getId('total-price').innerText = totalTicketPrice;
-    grandTotal();
-    this.classList.add("pointer-events-none");
-})
-document.getElementById('A4').addEventListener('click', function () {
-    removeChildElementClass('a4-eco');
-    const ticketPrice = getValue('total-price');
-    const totalTicketPrice = ticketPrice + 550;
-    getId('total-price').innerText = totalTicketPrice;
-    grandTotal();
-    this.classList.add("pointer-events-none");
-})
-document.getElementById('B1').addEventListener('click', function () {
-    removeChildElementClass('b1-eco');
-    const ticketPrice = getValue('total-price');
-    const totalTicketPrice = ticketPrice + 550;
-    getId('total-price').innerText = totalTicketPrice;
-    grandTotal();
-    this.classList.add("pointer-events-none");
-})
-document.getElementById('B2').addEventListener('click', function () {
-    removeChildElementClass('b2-eco');
-    const ticketPrice = getValue('total-price');
-    const totalTicketPrice = ticketPrice + 550;
-    getId('total-price').innerText = totalTicketPrice;
-    grandTotal();
-    this.classList.add("pointer-events-none");
-})
-document.getElementById('B3').addEventListener('click', function () {
-    removeChildElementClass('b3-eco');
-    const ticketPrice = getValue('total-price');
-    const totalTicketPrice = ticketPrice + 550;
-    getId('total-price').innerText = totalTicketPrice;
-    grandTotal();
-    this.classList.add("pointer-events-none");
-})
-document.getElementById('B4').addEventListener('click', function () {
-    removeChildElementClass('b4-eco');
-    const ticketPrice = getValue('total-price');
-    const totalTicketPrice = ticketPrice + 550;
-    getId('total-price').innerText = totalTicketPrice;
-    grandTotal();
-    this.classList.add("pointer-events-none");
-})
-
 function coupon() {
     const seatCount = getValue('seat-count');
     const inputValue = getId('input').value;
@@ -117,30 +52,46 @@ function getValue(elementId) {
 }
 
 
-
-
-let add = 0;
-let minus = 8;
-const seatLeft = document.getElementById('seat-left');
-const seatCount = document.getElementById('seat-count');
-const seatSelection = document.getElementsByClassName('seat-class')
-for (const item of seatSelection) {
-    item.addEventListener('click', function () {
-        add++;
-        minus--;
-        if (add >= 5) {
-            // alert('Please select only 4 seat')
-            return;
-        }
-
-        seatCount.innerText = add;
-        seatLeft.innerText = minus;
-        item.style.backgroundColor = '#1DD100';
-        this.classList.add("pointer-events-none");
-
-    })
-
-
+function seat() {
+    const seatClass = document.getElementsByClassName('seat-class')
+    let seatCount = 0;
+    let availableSeat = 8;
+    for (item of seatClass) {
+        item.addEventListener('click', function () {
+            if (seatCount === 4){
+                alert ('Please select only 4 seat')
+                return;
+            }
+            seatCount++;
+            availableSeat--;
+            getId('seat-count').innerText = seatCount;
+            getId('seat-left').innerText = availableSeat;
+            this.style.backgroundColor = '#1DD100';
+            const upperCase = this.innerText.toLowerCase() + '-eco';
+            removeChildElementClass(upperCase);
+            const ticketPrice = getValue('total-price');
+            const totalTicketPrice = ticketPrice + 550;
+            getId('total-price').innerText = totalTicketPrice;
+            grandTotal();
+            this.classList.add("pointer-events-none");
+        })
+    }
+    coupon()
 }
 
 
+
+// console.log(newArray)
+
+
+const nextBtn = getId('next-btn');
+getId('input-number').addEventListener('keyup', function (event) {
+    const text = parseInt(event.target.value);
+    console.log(text)
+    if(typeof text === 'number'){
+        nextBtn.removeAttribute('disabled')
+    }
+    
+})
+
+seat()
